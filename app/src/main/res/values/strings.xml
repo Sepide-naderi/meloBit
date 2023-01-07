@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">meloBit</string>
+    <string name="welcome">Welcome to Melobit</string>
+
+    <string name="HomePostType_new">New songs</string>
+    <string name="HomePostType_topSingers">Top singers</string>
+    <string name="HomePostType_topSongDay">Top song of the day</string>
+    <string name="HomePostType_topSongWeek">Top song of the week</string>
 </resources>
