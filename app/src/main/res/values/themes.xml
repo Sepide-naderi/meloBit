@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.MeloBit" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Music_player" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/mainColor2</item>
         <item name="colorPrimaryVariant">@color/mainColor1</item>
@@ -28,4 +28,8 @@
         <item name="android:textSize">@dimen/_16sdp</item>
         <item name="android:textColor">@color/white</item>
     </style>
+
+
+
+
 </resources>

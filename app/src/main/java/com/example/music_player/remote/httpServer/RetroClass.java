@@ -5,6 +5,9 @@ import com.example.music_player.remote.APIService.APIS_Music;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+
+import java.util.concurrent.TimeUnit;
+
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
@@ -17,6 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetroClass {
 
     private static final String BASE_PATH = Config.APIAddress; // For Server
+
 
 
     private static OkHttpClient getUnsafeOkHttpClient() {
@@ -44,7 +48,10 @@ public class RetroClass {
             sslContext.init(null, trustAllCerts, new java.security.SecureRandom());
             // Create an ssl socket factory with our all-trusting manager
             final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
-            OkHttpClient.Builder builder = new OkHttpClient.Builder();
+            OkHttpClient.Builder builder = new OkHttpClient.Builder()
+                    .connectTimeout(60, TimeUnit.SECONDS)
+                    .readTimeout(60, TimeUnit.SECONDS)
+                    .writeTimeout(60, TimeUnit.MINUTES);
             builder.sslSocketFactory(sslSocketFactory);
             builder.hostnameVerifier((hostname, session) -> true);
 
