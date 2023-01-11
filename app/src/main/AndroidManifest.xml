@@ -15,6 +15,7 @@
         android:theme="@style/Theme.Music_player"
         tools:targetApi="31">
         <activity
+            android:screenOrientation="portrait"
             android:name=".ui.activity.SplashScreen"
             android:exported="true">
             <intent-filter>
@@ -28,9 +29,18 @@
                 android:value="" />
         </activity>
 
-        <activity android:name=".ui.activity.MainActivity"/>
-        <activity android:name=".ui.activity.MusicInfo"/>
-        <activity android:name=".ui.activity.CategoriesInfo"/>
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.activity.MusicInfo"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.activity.CategoriesInfo"
+            android:screenOrientation="portrait"/>
 
 
     </application>

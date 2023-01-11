@@ -1,13 +1,12 @@
 package com.example.music_player.model;
 
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 public class ArtistInfo_M {
+
     @SerializedName("results")
     @Expose
     private List<Result> results = null;

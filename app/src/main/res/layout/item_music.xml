@@ -31,7 +31,8 @@
         app:layout_constraintStart_toEndOf="@+id/iv_cover"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="@dimen/_10sdp"
-        style="@style/body_small"/>
+        style="@style/body_small"
+        android:layout_marginTop="@dimen/_1sdp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

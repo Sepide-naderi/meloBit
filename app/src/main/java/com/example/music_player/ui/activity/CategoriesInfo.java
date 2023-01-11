@@ -51,7 +51,7 @@ public class CategoriesInfo extends AppCompatActivity {
         MusicRepository musicRepository = new MusicRepository(this);
         musicRepository.getNewSongs(10);
         musicRepository.getMutableLiveData_musicInfo().observe(this, musicInfo_m -> {
-            MusicAdapter adapter = new MusicAdapter(musicInfo_m.getResults(), this);
+            MusicAdapter adapter = new MusicAdapter(musicInfo_m.getResults(), null, this);
             recyclerView.setAdapter(adapter);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
         });

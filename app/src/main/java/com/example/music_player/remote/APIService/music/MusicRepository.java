@@ -7,6 +7,7 @@ import android.util.Log;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.music_player.model.MusicInfo_M;
+import com.example.music_player.model.Search_M;
 import com.example.music_player.remote.APIService.APIS_Music;
 import com.example.music_player.remote.httpServer.RetroClass;
 
@@ -23,7 +24,6 @@ public class MusicRepository {
     /*--------------------------------------------------------------------------------------------------------------------------*/
 
     private final MutableLiveData<MusicInfo_M> mutableLiveData_musicInfo = new MutableLiveData<>();
-
     private Context context;
     APIS_Music apiService;
 
@@ -103,8 +103,6 @@ public class MusicRepository {
                 });
     }
 
-
-
     /*--------------------------------------------------------------------------------------------------------------------------*/
     /*                                            { Getter }    { And }    { Setter }                                           */
     /*--------------------------------------------------------------------------------------------------------------------------*/
@@ -112,4 +110,5 @@ public class MusicRepository {
     public MutableLiveData<MusicInfo_M> getMutableLiveData_musicInfo() {
         return mutableLiveData_musicInfo;
     }
+
 }
