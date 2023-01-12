@@ -26,17 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         initBottomNavigationView();
-
-        MusicRepository musicRepository = new MusicRepository(this);
-        musicRepository.getTopMusic(1);
-        musicRepository.getMutableLiveData_musicInfo().observe(this, musicInfo_m -> {
-            Log.d("kjp8696hghfugf", musicInfo_m.getResults().get(0).getTitle());
-        });
-
-
-
     }
 
     private void initBottomNavigationView() {
