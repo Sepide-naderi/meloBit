@@ -22,6 +22,7 @@ public class SplashScreen extends AppCompatActivity {
 
         new Handler().postDelayed(() -> {
             startActivity(new Intent(this, MainActivity.class)); // next Page after 3 Sec
+            finish();
         }, 3000);
     }
 }

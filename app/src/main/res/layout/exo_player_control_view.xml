@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Cl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_player"
+    android:padding="20dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/IV_Fast"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/FL_button"
+            app:layout_constraintStart_toEndOf="@+id/FL_button"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/_20sdp"
+            app:srcCompat="@drawable/ic_fast_forward"
+            app:tint="@color/purple" />
+
+        <FrameLayout
+            android:id="@+id/FL_button"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="#00FFFFFF"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/IV_Rewind"
+            app:layout_constraintEnd_toStartOf="@+id/IV_Fast"
+            app:layout_constraintHorizontal_chainStyle="packed">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/exo_play"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                style="@style/ExoMediaButton.Play"
+                app:tint="@color/purple"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@id/exo_pause"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                style="@style/ExoMediaButton.Pause"
+                app:tint="@color/purple" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/IV_Rewind"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/FL_button"
+            app:layout_constraintEnd_toStartOf="@+id/FL_button"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:srcCompat="@drawable/ic_replay_10"
+            app:tint="@color/purple" />
+
+        <com.google.android.exoplayer2.ui.DefaultTimeBar
+            android:id="@id/exo_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FL_button"
+            app:played_color="@color/purple"
+            app:scrubber_color="@color/purple"
+            app:ad_marker_color="@color/purple"
+            app:unplayed_color="@color/mainColor3"
+            app:buffered_color="@color/purple"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
