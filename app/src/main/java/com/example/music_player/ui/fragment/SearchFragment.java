@@ -76,7 +76,7 @@ public class SearchFragment extends Fragment {
                 btn_song.setBackgroundResource(R.drawable.shape_unselect);
                 changeDataToRecyclerView();
             }else {
-                Toast.makeText(getContext(), "هیچ داده ای وجود ندارد", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "There is no data", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -87,7 +87,7 @@ public class SearchFragment extends Fragment {
                 mode = 1;
                 changeDataToRecyclerView();
             }else {
-                Toast.makeText(getContext(), "هیچ داده ای وجود ندارد", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "There is no data", Toast.LENGTH_SHORT).show();
             }
         });
     }

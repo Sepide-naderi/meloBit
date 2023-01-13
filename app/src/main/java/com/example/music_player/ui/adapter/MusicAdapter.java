@@ -84,6 +84,8 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
                         .putExtra("artistName", model.getArtists().get(0).getFullName())
                         .putExtra("countDownload", model.getDownloadCount())
                         .putExtra("songID", model.getId())
+                        .putExtra("audioURL", model.getAudio().getMedium().getUrl())
+                        .putExtra("date", model.getReleaseDate())
                 );
             });
         }else { // Return song for Search
@@ -99,6 +101,8 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
                         .putExtra("artistName", model.getArtists().get(0).getFullName())
                         .putExtra("countDownload", model.getDownloadCount())
                         .putExtra("songID", model.getId())
+                        .putExtra("audioURL", model.getAudio().getMedium().getUrl())
+                        .putExtra("date", model.getReleaseDate())
                 );
             });
         }

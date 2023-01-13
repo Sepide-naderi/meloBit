@@ -1,22 +1,13 @@
 package com.example.music_player.ui.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Adapter;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.music_player.R;
-import com.example.music_player.model.ArtistInfo_M;
-import com.example.music_player.model.MusicInfo_M;
 import com.example.music_player.remote.APIService.music.MusicRepository;
 import com.example.music_player.ui.adapter.ArtistAdapter;
-import com.example.music_player.ui.adapter.HomePostAdapter;
 import com.example.music_player.ui.adapter.MusicAdapter;
 
 
@@ -44,7 +35,6 @@ public class CategoriesInfo extends AppCompatActivity {
          } else if (categoriesType.equals(getString(R.string.HomePostType_topSongWeek))) {
              getTopSongWeek();
          }
-
     }
 
 
@@ -88,6 +78,8 @@ public class CategoriesInfo extends AppCompatActivity {
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
         });
     };
+
+
 
 
 }

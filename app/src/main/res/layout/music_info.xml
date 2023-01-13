@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/ll_info"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:text="date: 1/2/2022"
+                android:text="date: not found"
                 style="@style/body_small"/>
 
             <View

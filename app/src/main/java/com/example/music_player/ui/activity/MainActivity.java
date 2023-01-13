@@ -15,18 +15,23 @@ import com.example.music_player.model.MusicInfo_M;
 import com.example.music_player.remote.APIService.music.MusicRepository;
 import com.example.music_player.ui.fragment.HomeFragment;
 import com.example.music_player.ui.fragment.SearchFragment;
+import com.google.android.exoplayer2.ExoPlayer;
+import com.google.android.exoplayer2.source.DefaultMediaSourceFactory;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+    public static ExoPlayer exoPlayerAudio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initBottomNavigationView();
+        exoPlayerAudio = new ExoPlayer.Builder(this).setMediaSourceFactory(new DefaultMediaSourceFactory(this).setLiveTargetOffsetMs(5000))
+                .build(); // init AudioPlayer for all Screen
     }
 
     private void initBottomNavigationView() {
